@@ -9,4 +9,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Lengths {
 
+    private double number;
+
+    private String inUnites;
+
+    private String outUnites;
+
+
 }
