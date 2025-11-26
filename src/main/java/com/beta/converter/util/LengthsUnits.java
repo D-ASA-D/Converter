@@ -1,9 +1,11 @@
 package com.beta.converter.util;
 
 public enum LengthsUnits {
+    M,
     KM,
     SM,
     MM,
+    DM,
     MKM,
     NM,
     VERSHOK,
