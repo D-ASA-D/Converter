@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/convert")
 public class ConverterController {
 
-    @PostMapping("/test")
+    @PostMapping("/length")
     private Lengths testPost(@RequestBody Lengths inputValues){
         System.out.println(inputValues);
         return inputValues;
