@@ -49,9 +49,8 @@ public class ConverterService {
             case LINK -> number * 0.201168;
         };
         }
-
         public double convert (LengthsUnits lu, LengthsUnits lout, double number){
-            return toM(lu, number)/toM(lout, number);
+            return toM(lu, number)/toM(lout, 1);
         }
 
 }
