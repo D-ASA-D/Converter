@@ -1,6 +1,5 @@
 package com.beta.converter.service;
 
-import com.beta.converter.ConverterApplication;
 import com.beta.converter.util.LengthsUnits;
 
 public class ConverterService {
