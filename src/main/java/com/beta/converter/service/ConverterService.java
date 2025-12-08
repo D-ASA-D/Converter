@@ -2,7 +2,9 @@ package com.beta.converter.service;
 
 import com.beta.converter.ConverterApplication;
 import com.beta.converter.util.LengthsUnits;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ConverterService {
 
     private double toM(LengthsUnits lu, double number){
