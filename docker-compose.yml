@@ -3,5 +3,9 @@ version: '3.8'
 services:
   app:
     build:
-      context:
+      context: .
       dockerfile: dockerfile
+    container_name: converter_app
+    restart: unless-stopped
+    ports:
+      - "8061:8080"
