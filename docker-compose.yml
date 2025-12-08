@@ -4,4 +4,4 @@ services:
   app:
     build:
       context:
-      dockerfile:
+      dockerfile: dockerfile
