@@ -129,7 +129,7 @@
     
     <br>
     
-    <button onclick="convert()">Перевести</button>
+    <button onclick="convertLengths()">Перевести</button>
     
     <br><br>
     
@@ -137,15 +137,6 @@
         Результат: ...
     </div>
     
-    <script>
-        function convert() {
-            const sourceUnit = document.getElementById('source-unit').value;
-            const targetUnit = document.getElementById('target-unit').value;
-            const value = document.getElementById('value').value;
-            
-            document.getElementById('result').innerHTML = 
-                `Будет выполнена конвертация: ${value} [${sourceUnit}] → [${targetUnit}]`;
-        }
-    </script>
+    <script src="./LengthsConvertingScript.js"> </script>
 </body>
 </html>
