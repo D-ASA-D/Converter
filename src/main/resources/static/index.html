@@ -3,143 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <title>Конвертер мер длины</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Конвертер мер длины</h1>
-    
-    <div>
-        <label for="source-unit">Перевести из:</label>
-        <select id="source-unit">
-            <optgroup label="Метрические">
-                <option value="M">Метр</option>
-                <option value="KM">Километр</option>
-                <option value="SM">Сантиметр</option>
-                <option value="MM">Миллиметр</option>
-                <option value="DM">Дециметр</option>
-                <option value="MKM">Микрометр</option>
-                <option value="NM">Нанометр</option>
-            </optgroup>
+    <div class="container">
+        <h1>Конвертер мер длины</h1>
+        
+        <div class="converter-form">
+            <div class="units-row">
+                <div class="form-group">
+                    <label for="source-unit">Перевести из:</label>
+                    <select id="source-unit">
+                        <optgroup label="Метрические">
+                            <option value="M">Метр</option>
+                            <option value="KM">Километр</option>
+                            <option value="SM">Сантиметр</option>
+                            <option value="MM">Миллиметр</option>
+                            <option value="DM">Дециметр</option>
+                            <option value="MKM">Микрометр</option>
+                            <option value="NM">Нанометр</option>
+                        </optgroup>
+                        
+                        <optgroup label="Древнерусские">
+                            <option value="VERSHOK">Вершок</option>
+                            <option value="PYAD">Пядь</option>
+                            <option value="MALAYA_PYAD">Малая пядь</option>
+                            <option value="BOLSHAYA_PYAD">Большая пядь</option>
+                            <option value="LOKOT">Локоть</option>
+                            <option value="ARSHIN">Аршин</option>
+                            <option value="MAHOVAYA_SAJEN">Маховая сажень</option>
+                            <option value="KOSAYA_SAJEN">Косая сажень</option>
+                            <option value="KAZENNAYA_SAJEN">Казначейская сажень</option>
+                            <option value="VERSTA">Верста</option>
+                            <option value="MEJEVAYA_VERSTA">Межевая верста</option>
+                        </optgroup>
+                        
+                        <optgroup label="Национальные">
+                            <option value="INCH">Дюйм</option>
+                            <option value="FOOT">Фут</option>
+                            <option value="YARD">Ярд</option>
+                            <option value="NAUTICAL_MILE">Морская миля</option>
+                            <option value="MILE">Сухопутная миля</option>
+                            <option value="LI">Ли</option>
+                            <option value="CHI">Чи</option>
+                            <option value="CAN">Кэн</option>
+                            <option value="CYAKU">Сяку</option>
+                            <option value="ALN">Альн</option>
+                            <option value="FATHOM">Фатом</option>
+                            <option value="HAND">Хэнд</option>
+                            <option value="ZOLL">Цоль</option>
+                            <option value="PALMO">Пальмо</option>
+                            <option value="STADIY">Стадия</option>
+                            <option value="WA">Хаат</option>
+                            <option value="ZHANG">Джоу</option>
+                        </optgroup>
+                        
+                        <optgroup label="Имперские">
+                            <option value="ROD">Род</option>
+                            <option value="CHAIN">Чейн</option>
+                            <option value="FURLONG">Фарлонг</option>
+                            <option value="LEAGUE">Лига</option>
+                            <option value="LINK">Линк</option>
+                        </optgroup>
+                    </select>
+                </div>
+                
+                <span>→</span>
+                
+                <div class="form-group">
+                    <label for="target-unit">Перевести в:</label>
+                    <select id="target-unit">
+                        <optgroup label="Метрические">
+                            <option value="M">Метр</option>
+                            <option value="KM">Километр</option>
+                            <option value="SM">Сантиметр</option>
+                            <option value="MM">Миллиметр</option>
+                            <option value="DM">Дециметр</option>
+                            <option value="MKM">Микрометр</option>
+                            <option value="NM">Нанометр</option>
+                        </optgroup>
+                        
+                        <optgroup label="Древнерусские">
+                            <option value="VERSHOK">Вершок</option>
+                            <option value="PYAD">Пядь</option>
+                            <option value="MALAYA_PYAD">Малая пядь</option>
+                            <option value="BOLSHAYA_PYAD">Большая пядь</option>
+                            <option value="LOKOT">Локоть</option>
+                            <option value="ARSHIN">Аршин</option>
+                            <option value="MAHOVAYA_SAJEN">Маховая сажень</option>
+                            <option value="KOSAYA_SAJEN">Косая сажень</option>
+                            <option value="KAZENNAYA_SAJEN">Казначейская сажень</option>
+                            <option value="VERSTA">Верста</option>
+                            <option value="MEJEVAYA_VERSTA">Межевая верста</option>
+                        </optgroup>
+                        
+                        <optgroup label="Национальные">
+                            <option value="INCH">Дюйм</option>
+                            <option value="FOOT">Фут</option>
+                            <option value="YARD">Ярд</option>
+                            <option value="NAUTICAL_MILE">Морская миля</option>
+                            <option value="MILE">Сухопутная миля</option>
+                            <option value="LI">Ли</option>
+                            <option value="CHI">Чи</option>
+                            <option value="CAN">Кэн</option>
+                            <option value="CYAKU">Сяку</option>
+                            <option value="ALN">Альн</option>
+                            <option value="FATHOM">Фатом</option>
+                            <option value="HAND">Хэнд</option>
+                            <option value="ZOLL">Цоль</option>
+                            <option value="PALMO">Пальмо</option>
+                            <option value="STADIY">Стадия</option>
+                            <option value="WA">Хаат</option>
+                            <option value="ZHANG">Джоу</option>
+                        </optgroup>
+                        
+                        <optgroup label="Имперские">
+                            <option value="ROD">Род</option>
+                            <option value="CHAIN">Чейн</option>
+                            <option value="FURLONG">Фарлонг</option>
+                            <option value="LEAGUE">Лига</option>
+                            <option value="LINK">Линк</option>
+                        </optgroup>
+                    </select>
+                </div>
+            </div>
             
-            <optgroup label="Древнерусские">
-                <option value="VERSHOK">Вершок</option>
-                <option value="PYAD">Пядь</option>
-                <option value="MALAYA_PYAD">Малая пядь</option>
-                <option value="BOLSHAYA_PYAD">Большая пядь</option>
-                <option value="LOKOT">Локоть</option>
-                <option value="ARSHIN">Аршин</option>
-                <option value="MAHOVAYA_SAJEN">Маховая сажень</option>
-                <option value="KOSAYA_SAJEN">Косая сажень</option>
-                <option value="KAZENNAYA_SAJEN">Казначейская сажень</option>
-                <option value="VERSTA">Верста</option>
-                <option value="MEJEVAYA_VERSTA">Межевая верста</option>
-            </optgroup>
+            <div class="form-group">
+                <label for="value">Введите значение:</label>
+                <input type="number" id="value" value="1" min="0" step="any" placeholder="Введите число">
+            </div>
             
-            <optgroup label="Национальные">
-                <option value="INCH">Дюйм</option>
-                <option value="FOOT">Фут</option>
-                <option value="YARD">Ярд</option>
-                <option value="NAUTICAL_MILE">Морская миля</option>
-                <option value="MILE">Сухопутная миля</option>
-                <option value="LI">Ли</option>
-                <option value="CHI">Чи</option>
-                <option value="CAN">Кэн</option>
-                <option value="CYAKU">Сяку</option>
-                <option value="ALN">Альн</option>
-                <option value="FATHOM">Фатом</option>
-                <option value="HAND">Хэнд</option>
-                <option value="ZOLL">Цоль</option>
-                <option value="PALMO">Пальмо</option>
-                <option value="STADIY">Стадия</option>
-                <option value="WA">Хаат</option>
-                <option value="ZHANG">Джоу</option>
-            </optgroup>
-            
-            <optgroup label="Имперские">
-                <option value="ROD">Род</option>
-                <option value="CHAIN">Чейн</option>
-                <option value="FURLONG">Фарлонг</option>
-                <option value="LEAGUE">Лига</option>
-                <option value="LINK">Линк</option>
-            </optgroup>
-        </select>
+            <div class="button-container">
+                <button onclick="convertLengths()">Перевести</button>
+                <button class="swap-button" onclick="swapUnits()">Поменять местами</button>
+            </div>
+        </div>
+        
+        <div id="result">
+            <div class="result-label">Результат:</div>
+            <div class="result-value">...</div>
+            <div class="result-label">Выберите единицы и нажмите "Перевести"</div>
+        </div>
+
     </div>
     
-    <br>
-    
-    <div>
-        <label for="value">Введите значение:</label>
-        <input type="number" id="value" value="1">
-    </div>
-    
-    <br>
-    
-    <div>
-        <label for="target-unit">Перевести в:</label>
-        <select id="target-unit">
-            <optgroup label="Метрические">
-                <option value="M">Метр</option>
-                <option value="KM">Километр</option>
-                <option value="SM">Сантиметр</option>
-                <option value="MM">Миллиметр</option>
-                <option value="DM">Дециметр</option>
-                <option value="MKM">Микрометр</option>
-                <option value="NM">Нанометр</option>
-            </optgroup>
-            
-            <optgroup label="Древнерусские">
-                <option value="VERSHOK">Вершок</option>
-                <option value="PYAD">Пядь</option>
-                <option value="MALAYA_PYAD">Малая пядь</option>
-                <option value="BOLSHAYA_PYAD">Большая пядь</option>
-                <option value="LOKOT">Локоть</option>
-                <option value="ARSHIN">Аршин</option>
-                <option value="MAHOVAYA_SAJEN">Маховая сажень</option>
-                <option value="KOSAYA_SAJEN">Косая сажень</option>
-                <option value="KAZENNAYA_SAJEN">Казначейская сажень</option>
-                <option value="VERSTA">Верста</option>
-                <option value="MEJEVAYA_VERSTA">Межевая верста</option>
-            </optgroup>
-            
-            <optgroup label="Национальные">
-                <option value="INCH">Дюйм</option>
-                <option value="FOOT">Фут</option>
-                <option value="YARD">Ярд</option>
-                <option value="NAUTICAL_MILE">Морская миля</option>
-                <option value="MILE">Сухопутная миля</option>
-                <option value="LI">Ли</option>
-                <option value="CHI">Чи</option>
-                <option value="CAN">Кэн</option>
-                <option value="CYAKU">Сяку</option>
-                <option value="ALN">Альн</option>
-                <option value="FATHOM">Фатом</option>
-                <option value="HAND">Хэнд</option>
-                <option value="ZOLL">Цоль</option>
-                <option value="PALMO">Пальмо</option>
-                <option value="STADIY">Стадия</option>
-                <option value="WA">Хаат</option>
-                <option value="ZHANG">Джоу</option>
-            </optgroup>
-            
-            <optgroup label="Имперские">
-                <option value="ROD">Род</option>
-                <option value="CHAIN">Чейн</option>
-                <option value="FURLONG">Фарлонг</option>
-                <option value="LEAGUE">Лига</option>
-                <option value="LINK">Линк</option>
-            </optgroup>
-        </select>
-    </div>
-    
-    <br>
-    
-    <button onclick="convertLengths()">Перевести</button>
-    
-    <br><br>
-    
-    <div id="result">
-        Результат: ...
-    </div>
-    
-    <script src="./LengthsConvertingScript.js"> </script>
+    <script>
+        function swapUnits() {
+            const source = document.getElementById('source-unit');
+            const target = document.getElementById('target-unit');
+            const temp = source.value;
+            source.value = target.value;
+            target.value = temp;
+        }
+        
+        document.getElementById('value').addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                convertLengths();
+            }
+        });
+    </script>
+    <script src="./LengthsConvertingScript.js"></script>
 </body>
 </html>
